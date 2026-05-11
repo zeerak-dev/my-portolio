@@ -18,6 +18,13 @@ Compounding improvements noticed during real work. One entry per task.
 
 ---
 
+## 2026-05-12 - Footer social links + mobile hero fix
+**Suggestion:** Add a `references/social-links.md` file with all social URLs and status (active / coming soon) in one place — so you never have to hunt through component code to update a link or add a new platform.
+**Why:** The X account slot, LinkedIn URL, and Instagram URL were scattered across a single hardcoded array in Footer.tsx. Updating one link meant finding the file, the array, and knowing which field to edit.
+**Impact:** One-line updates to any social link without touching component code; also makes it easy to hand off to a VA or assistant.
+
+---
+
 ## 2026-05-12 - Animation upgrade (cursor, video, char reveal)
 **Suggestion:** Keep a `/public/README-assets.md` that lists every expected asset file path, format, and dimension — so when you hand off photos/videos, you know exactly where to drop them and what size they should be.
 **Why:** The hero video slot is `hero-video.mp4` and photo is `hero-photo.jpg` — easy to forget. Without a spec file, the wrong format or wrong path causes silent failures (video just doesn't play, photo doesn't show).
