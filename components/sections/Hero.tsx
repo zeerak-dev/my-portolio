@@ -36,7 +36,7 @@ export default function Hero() {
           loop
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ opacity: 0.18 }}
+          style={{ opacity: 0.45 }}
         >
           {/* Place your video at /public/hero-video.mp4 */}
           <source src="/hero-video.mp4" type="video/mp4" />
@@ -172,11 +172,11 @@ export default function Hero() {
             initial={{ opacity: 0, x: 60 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="hidden lg:flex justify-center"
+            className="flex justify-center"
           >
-            <div className="relative w-[420px] xl:w-[480px]">
-              {/* Photo frame */}
-              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border border-gold/20 bg-navy-mid">
+            <div className="relative w-full max-w-sm lg:w-[420px] xl:w-[480px]">
+              {/* Photo frame — square on mobile, tall portrait on desktop */}
+              <div className="relative aspect-square lg:aspect-[4/5] rounded-3xl overflow-hidden border border-gold/20 bg-navy-mid">
 
                 {/* Hero photo */}
                 <Image
